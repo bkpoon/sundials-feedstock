@@ -17,7 +17,7 @@ cd build
 # EXAMPLES_ENABLE=1 enables tests to be run (requires Python)
 
 if [ $(uname -s) == 'Darwin' ]; then
-    WITH_OPENMP=0  # CMake script fails to setup OpenMP_C_FLAGS anyway 
+    WITH_OPENMP=0  # CMake script fails to setup OpenMP_C_FLAGS anyway
 else
     WITH_OPENMP=1
 fi
@@ -27,6 +27,7 @@ cmake ${CMAKE_ARGS} -LAH \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_LIBDIR=lib \
+    -DBUILD_FORTRAN_MODULE_INTERFACE=ON \
     -DBUILD_SHARED_LIBS=ON \
     -DBUILD_STATIC_LIBS=OFF \
     -DCMAKE_C_STANDARD=11 \
