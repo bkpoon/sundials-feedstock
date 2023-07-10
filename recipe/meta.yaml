@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - libblas  # [not win]
     - liblapack  # [not win]
