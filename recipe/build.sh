@@ -46,7 +46,7 @@ cmake ${CMAKE_ARGS} -LAH \
     -DSUPERLUMT_LIBRARY=$PWD/../SuperLU_MT_3.1/lib/libsuperlu_mt_OPENMP.a \
     -DSUPERLUMT_LIBRARIES="$PWD/../SuperLU_MT_3.1/lib/libsuperlu_mt_OPENMP.a;blas" \
     -DSUNDIALS_F77_FUNC_CASE="LOWER" -DSUNDIALS_F77_FUNC_UNDERSCORES="ONE" \
-    -DSUNDIALS_INDEX_SIZE=32 \
+    # -DSUNDIALS_INDEX_SIZE=32 \
     ..  # int32_t needed for Lapack not to be disabled
 
 make install -j${CPU_COUNT}
