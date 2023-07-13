@@ -20,6 +20,7 @@ requirements:
     - make   # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
   host:
     - msinttypes  # [win and vc<14]
     - liblapack  # [not win]
